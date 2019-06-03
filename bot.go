@@ -45,7 +45,7 @@ func NewBotAPI(token string, endpoint string) (*BotAPI, error) {
 // It requires a token, provided by @BotFather on Telegram.
 func NewBotAPIWithClient(token string, client *http.Client, endpoint string) (*BotAPI, error) {
 
-	if endpoint != "" {
+	if endpoint == "" {
 		endpoint = APIEndpoint
 	}
 
